@@ -2,6 +2,10 @@
 
 This is my new basic setup for iOS project.
 
+## General Setup
+- Swift 4
+- XCode 9
+
 ## Architecture
 VIPER
 
