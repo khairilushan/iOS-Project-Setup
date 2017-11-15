@@ -1,6 +1,8 @@
 # KU-iOS-Project-Setup
 
 This is my new basic setup for iOS project.
+This is also my learning project. So you could find some mistakes from my code, such as my VIPER implementation,how I use Swinject for dependency injection or even how I create my base network layer. 
+Please share with me you thoughts.
 
 ## General Setup
 - Swift 4
@@ -18,9 +20,6 @@ VIPER
 - Gloss 2.0.0-beta.2 : JSON parser
 - RealmSwift : For database
 - IGListKit : To maintain UICollectionView
-
-This is also my learning project. So you could find some mistakes from my code, such as my VIPER implementation,how I use Swinject for dependency injection or even how I create my base network layer. 
-Please share with me you thoughts.
 
 ## Resources
 - VIPER : https://blog.mindorks.com/building-ios-app-with-viper-architecture-8109acc72227
