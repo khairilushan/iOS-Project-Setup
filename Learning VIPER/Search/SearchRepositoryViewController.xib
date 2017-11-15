@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchRepositoryViewController" customModule="Learning_VIPER" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Nfb-x5-wE0" id="Cno-NQ-W1l"/>
+                <outlet property="searchTextField" destination="ALc-oB-7T9" id="rsi-SM-Vzb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="hO5-Ww-7BJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-x5-wE0">
+                    <rect key="frame" x="0.0" y="104" width="375" height="708"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vFp-5q-liD">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ALc-oB-7T9">
+                    <rect key="frame" x="20" y="54" width="335" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="EME-w3-x01"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Nfb-x5-wE0" secondAttribute="trailing" id="1ja-c6-Flj"/>
+                <constraint firstItem="Nfb-x5-wE0" firstAttribute="top" secondItem="ALc-oB-7T9" secondAttribute="bottom" constant="10" id="77J-7c-Sqi"/>
+                <constraint firstAttribute="bottom" secondItem="Nfb-x5-wE0" secondAttribute="bottom" id="CWB-rd-V6u"/>
+                <constraint firstItem="ALc-oB-7T9" firstAttribute="top" secondItem="Fpk-nY-1ch" secondAttribute="top" constant="10" id="IRr-Pc-awd"/>
+                <constraint firstItem="ALc-oB-7T9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="KYK-bW-8nk"/>
+                <constraint firstAttribute="trailing" secondItem="ALc-oB-7T9" secondAttribute="trailing" constant="20" id="j1O-En-jY5"/>
+                <constraint firstItem="Nfb-x5-wE0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wkr-rZ-QxM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Fpk-nY-1ch"/>
+        </view>
+    </objects>
+</document>
