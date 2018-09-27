@@ -13,6 +13,8 @@ protocol RestApi {
 
 struct RestApiImpl: RestApi {
     func search(params: RequestParams) -> Single<SearchRepoEntity> {
-        return GithubApi.search(params: params).execute().mapObject(type: SearchRepoEntity.self)
+        return GithubApi.search(params: params).execute()
+            .mapJson()
+            .mapCodable(SearchRepoEntity.self)
     }
 }

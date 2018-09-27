@@ -19,12 +19,12 @@ struct RepoModel {
 extension RepoModel {
     static func fromEntity(_ entity: RepoEntity) -> RepoModel {
         return RepoModel(
-                repoId: entity.repoId.value ?? 0,
+                repoId: entity.repoId ?? 0,
                 name: entity.name ?? "",
                 fullName: entity.fullName ?? "",
                 description: entity.desc ?? "",
                 ownerName: entity.owner?.login ?? "",
-                ownerId: entity.owner?.userId.value ?? 0,
+                ownerId: entity.owner?.userId ?? 0,
                 ownerPageUrl: entity.owner?.htmlUrl,
                 ownerAvatar: entity.owner?.avatarUrl
         )

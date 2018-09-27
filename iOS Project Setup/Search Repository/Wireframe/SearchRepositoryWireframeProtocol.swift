@@ -17,7 +17,7 @@ final class SearchRepositoryWireframeImpl {
 
 extension SearchRepositoryWireframeImpl: SearchRepositoryWireframeProtocol {
     func presentRepositoryDetail(from view: SearchRepositoryViewProtocol, repo: RepoModel) {
-        let detailController = RepositoryDetailWireframeImpl.createRepositoryDetail()
+        let detailController = RepositoryDetailWireframe.createRepositoryDetail()
         if let source = view as? UIViewController {
             source.navigationController?.pushViewController(detailController, animated: true)
         }

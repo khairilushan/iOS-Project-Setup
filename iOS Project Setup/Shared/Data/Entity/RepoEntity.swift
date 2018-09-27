@@ -6,39 +6,20 @@
 import Foundation
 import Realm
 import RealmSwift
-import Gloss
 
-class RepoEntity: Object, JSONDecodable {
-    let repoId = RealmOptional<Int>()
-    @objc dynamic var name: String?
-    @objc dynamic var fullName: String?
-    @objc dynamic var desc: String?
-    @objc dynamic var htmlUrl: String?
-    @objc dynamic var owner: RepoOwnerEntity?
-
-    required init() {
-        super.init()
+struct RepoEntity: Codable {
+    enum CodingKeys: String, CodingKey {
+        case repoId = "id"
+        case name
+        case fullName = "full_name"
+        case desc = "description"
+        case owner
+        case htmlUrl = "html_url"
     }
-
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        super.init(realm: realm, schema: schema)
-    }
-
-    required init(value: Any, schema: RLMSchema) {
-        super.init(value: value, schema: schema)
-    }
-
-    override init(value: Any) {
-        super.init(value: value)
-    }
-
-    required init?(json: JSON) {
-        super.init()
-        repoId.value = "id" <~~ json
-        name = "name" <~~ json
-        fullName = "full_name" <~~ json
-        desc = "description" <~~ json
-        owner = "owner" <~~ json
-        htmlUrl = "html_url" <~~ json
-    }
+    var repoId: Int?
+    var name: String?
+    var fullName: String?
+    var desc: String?
+    var htmlUrl: String?
+    var owner: RepoOwnerEntity?
 }

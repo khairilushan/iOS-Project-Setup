@@ -17,6 +17,9 @@
 		2D4C0A9D215B992C00688A29 /* RepositoryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C0A9C215B992C00688A29 /* RepositoryItemViewModel.swift */; };
 		2DA406AB1FBC353D003970D3 /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA406A91FBC353D003970D3 /* RepositoryCollectionViewCell.swift */; };
 		2DA406AC1FBC353D003970D3 /* RepositoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA406AA1FBC353D003970D3 /* RepositoryCollectionViewCell.xib */; };
+		2DCCF9C2215C91D100B09296 /* PrimitiveSequence+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF9C1215C91D100B09296 /* PrimitiveSequence+Codable.swift */; };
+		2DCCF9C4215C924000B09296 /* JSONDecoder+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF9C3215C924000B09296 /* JSONDecoder+Data.swift */; };
+		2DCCF9C6215C933600B09296 /* PrimitiveSequence+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF9C5215C933600B09296 /* PrimitiveSequence+Json.swift */; };
 		9E5D8B1BAB4290A954C81C7E /* Pods_iOS_Project_Setup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7B7E988EB07AAE68ECDE5D /* Pods_iOS_Project_Setup.framework */; };
 		D33B204479E0E7004AFC9357 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B2CD3D964EFE2B1439048 /* String+Extension.swift */; };
 		D33B208FBC88910C80D82408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33B24D850C4EF996776619A /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		2DA406A91FBC353D003970D3 /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DA406AA1FBC353D003970D3 /* RepositoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		2DC4458D1FB4131000E3CC65 /* iOS Project Setup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Project Setup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DCCF9C1215C91D100B09296 /* PrimitiveSequence+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Codable.swift"; sourceTree = "<group>"; };
+		2DCCF9C3215C924000B09296 /* JSONDecoder+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Data.swift"; sourceTree = "<group>"; };
+		2DCCF9C5215C933600B09296 /* PrimitiveSequence+Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Json.swift"; sourceTree = "<group>"; };
 		75F582250D3A006796E4657E /* Pods-Learning VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Learning VIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Learning VIPER/Pods-Learning VIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		B68E22A7D49F41D7896B8A28 /* Pods-Learning VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Learning VIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-Learning VIPER/Pods-Learning VIPER.release.xcconfig"; sourceTree = "<group>"; };
 		D33B20678B6F99ACB6FF70E1 /* InteractorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
@@ -350,6 +356,9 @@
 				D33B2CD3D964EFE2B1439048 /* String+Extension.swift */,
 				2D4C0A8B215B968100688A29 /* ListCollectionContext+Dequeueing.swift */,
 				2D09ED8C215C84FD00775C2F /* UIImageView+Kingfisher.swift */,
+				2DCCF9C1215C91D100B09296 /* PrimitiveSequence+Codable.swift */,
+				2DCCF9C3215C924000B09296 /* JSONDecoder+Data.swift */,
+				2DCCF9C5215C933600B09296 /* PrimitiveSequence+Json.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -478,11 +487,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS Project Setup/Pods-iOS Project Setup-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya-Gloss/Moya_Gloss.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -493,11 +500,9 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_Gloss.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -554,6 +559,7 @@
 				D33B23274EAF4B3A01FF902E /* SearchRepoEntity.swift in Sources */,
 				D33B213EB3EDB9ABE745246D /* SearchRepositoryPresenter.swift in Sources */,
 				D33B232BCAC915D35DC42F1D /* RepoModel.swift in Sources */,
+				2DCCF9C6215C933600B09296 /* PrimitiveSequence+Json.swift in Sources */,
 				D33B2D2579E4BC0827CB4E25 /* SearchRepositoryWireframeProtocol.swift in Sources */,
 				D33B2FC4429530563C7902DA /* RepositoryDetailWireframe.swift in Sources */,
 				D33B2A11E0F422C4A92EAD61 /* RepositoryDetailViewController.swift in Sources */,
@@ -567,11 +573,13 @@
 				D33B2AD546CB0EE3A2207A0C /* WireframeAssembly.swift in Sources */,
 				2D4C0A9D215B992C00688A29 /* RepositoryItemViewModel.swift in Sources */,
 				D33B243C89878662C7E0A529 /* UIAlertControllerStyle+Extension.swift in Sources */,
+				2DCCF9C2215C91D100B09296 /* PrimitiveSequence+Codable.swift in Sources */,
 				D33B204479E0E7004AFC9357 /* String+Extension.swift in Sources */,
 				2DA406AB1FBC353D003970D3 /* RepositoryCollectionViewCell.swift in Sources */,
 				D33B2EF98805728B8F273A59 /* BaseViewController.swift in Sources */,
 				D33B254E66EFC0E8C8F08030 /* BasePresenter.swift in Sources */,
 				2D4C0A98215B989100688A29 /* RepositoryDetailPresenter.swift in Sources */,
+				2DCCF9C4215C924000B09296 /* JSONDecoder+Data.swift in Sources */,
 				D33B268545025482A8C97A17 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,7 +701,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMWC36RWM5;
-				INFOPLIST_FILE = $PROJECT_NAME/Info.plist;
+				INFOPLIST_FILE = "$PROJECT_NAME/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.khairilushan.ios-setup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,7 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMWC36RWM5;
-				INFOPLIST_FILE = $PROJECT_NAME/Info.plist;
+				INFOPLIST_FILE = "$PROJECT_NAME/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.khairilushan.ios-setup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
