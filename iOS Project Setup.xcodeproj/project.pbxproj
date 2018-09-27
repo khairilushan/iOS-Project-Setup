@@ -41,7 +41,7 @@
 		D33B2BA4F383B0A97EAB92CC /* RepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B2DD40B0E49F44244A6D9 /* RepositoryAssembly.swift */; };
 		D33B2BDD6756738451322841 /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B20678B6F99ACB6FF70E1 /* InteractorAssembly.swift */; };
 		D33B2CEAF5CCDBCA7112856D /* SearchRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B244EF04FABE021B47011 /* SearchRepositoryViewController.swift */; };
-		D33B2D2579E4BC0827CB4E25 /* SearchRepositoryWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B24417A09404C08858A30 /* SearchRepositoryWireframeProtocol.swift */; };
+		D33B2D2579E4BC0827CB4E25 /* SearchRepositoryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B24417A09404C08858A30 /* SearchRepositoryWireframe.swift */; };
 		D33B2D71133D3C5A627770F8 /* RepoOwnerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B257A35ABBDB19F50F453 /* RepoOwnerEntity.swift */; };
 		D33B2DCD1A29A294189372B5 /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B2560EB8AA84CA2A41808 /* NetworkAssembly.swift */; };
 		D33B2E0B40B907EAD00A2F34 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B2906763DBD2DDF7EE17A /* RestApi.swift */; };
@@ -78,7 +78,7 @@
 		D33B21ACBAD808C6E2488AC6 /* PresenterAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterAssembly.swift; sourceTree = "<group>"; };
 		D33B238C496655F735000DA0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D33B23A357CD5FEDEB35A291 /* GithubApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
-		D33B24417A09404C08858A30 /* SearchRepositoryWireframeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoryWireframeProtocol.swift; sourceTree = "<group>"; };
+		D33B24417A09404C08858A30 /* SearchRepositoryWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoryWireframe.swift; sourceTree = "<group>"; };
 		D33B244EF04FABE021B47011 /* SearchRepositoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoryViewController.swift; sourceTree = "<group>"; };
 		D33B24815DC7E5EEFA8DFE36 /* BaseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
 		D33B24D850C4EF996776619A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		2D4C0A8F215B97C400688A29 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				D33B24417A09404C08858A30 /* SearchRepositoryWireframeProtocol.swift */,
+				D33B24417A09404C08858A30 /* SearchRepositoryWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -560,7 +560,7 @@
 				D33B213EB3EDB9ABE745246D /* SearchRepositoryPresenter.swift in Sources */,
 				D33B232BCAC915D35DC42F1D /* RepoModel.swift in Sources */,
 				2DCCF9C6215C933600B09296 /* PrimitiveSequence+Json.swift in Sources */,
-				D33B2D2579E4BC0827CB4E25 /* SearchRepositoryWireframeProtocol.swift in Sources */,
+				D33B2D2579E4BC0827CB4E25 /* SearchRepositoryWireframe.swift in Sources */,
 				D33B2FC4429530563C7902DA /* RepositoryDetailWireframe.swift in Sources */,
 				D33B2A11E0F422C4A92EAD61 /* RepositoryDetailViewController.swift in Sources */,
 				D33B2728292C75A23045534B /* AppContainer.swift in Sources */,
@@ -701,7 +701,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMWC36RWM5;
-				INFOPLIST_FILE = "$PROJECT_NAME/Info.plist";
+				INFOPLIST_FILE = $PROJECT_NAME/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.khairilushan.ios-setup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -717,7 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMWC36RWM5;
-				INFOPLIST_FILE = "$PROJECT_NAME/Info.plist";
+				INFOPLIST_FILE = $PROJECT_NAME/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.khairilushan.ios-setup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
