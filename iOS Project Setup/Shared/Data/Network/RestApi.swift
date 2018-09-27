@@ -5,7 +5,6 @@
 
 import Foundation
 import RxSwift
-import Moya_Gloss
 
 protocol RestApi {
     func search(params: RequestParams) -> Single<SearchRepoEntity>
