@@ -9,7 +9,7 @@ import Swinject
 class WireframeAssembly: Assembly {
     func assemble(container: Container) {
         container.register(SearchRepositoryWireframeProtocol.self) { _ in
-            return SearchRepositoryWireframeImpl()
+            return SearchRepositoryWireframe()
         }
     }
 }

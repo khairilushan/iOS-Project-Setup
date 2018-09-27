@@ -5,7 +5,7 @@
 
 import UIKit
 
-final class SearchRepositoryWireframeImpl {
+final class SearchRepositoryWireframe {
     static func createSearchRepository() -> SearchRepositoryViewController {
         let controller = SearchRepositoryViewController()
         let presenter = AppContainer.shared.resolve(
@@ -15,7 +15,7 @@ final class SearchRepositoryWireframeImpl {
     }
 }
 
-extension SearchRepositoryWireframeImpl: SearchRepositoryWireframeProtocol {
+extension SearchRepositoryWireframe: SearchRepositoryWireframeProtocol {
     func presentRepositoryDetail(from view: SearchRepositoryViewProtocol, repo: RepoModel) {
         let detailController = RepositoryDetailWireframe.createRepositoryDetail()
         if let source = view as? UIViewController {

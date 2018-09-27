@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppContainer.shared.inject()
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        let controller = SearchRepositoryWireframeImpl.createSearchRepository()
+        let controller = SearchRepositoryWireframe.createSearchRepository()
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
 

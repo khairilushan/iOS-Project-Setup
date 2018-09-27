@@ -6,11 +6,11 @@
 import Foundation
 import RxSwift
 
-protocol RestApi {
+protocol RestApiProtocol {
     func search(params: RequestParams) -> Single<SearchRepoEntity>
 }
 
-struct RestApiImpl: RestApi {
+struct RestApi: RestApiProtocol {
     func search(params: RequestParams) -> Single<SearchRepoEntity> {
         return GithubApi.search(params: params).execute()
             .mapJson()

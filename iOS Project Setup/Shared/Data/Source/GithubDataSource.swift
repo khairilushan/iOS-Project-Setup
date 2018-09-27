@@ -28,9 +28,9 @@ struct GithubDataSourceFactory {
 }
 
 struct GithubDataSourceNetwork: GithubDataSource {
-    private var api: RestApi
+    private var api: RestApiProtocol
 
-    init(api: RestApi) {
+    init(api: RestApiProtocol) {
         self.api = api
     }
 

@@ -8,11 +8,11 @@ import Swinject
 
 struct NetworkAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(RestApi.self) { _ in
-            return RestApiImpl()
+        container.register(RestApiProtocol.self) { _ in
+            return RestApi()
         }
         container.register(GithubDataSourceNetwork.self) { (resolver: Resolver) in
-            let restApi = resolver.resolve(RestApi.self)!
+            let restApi = resolver.resolve(RestApiProtocol.self)!
             return GithubDataSourceNetwork(api: restApi)
         }
     }
